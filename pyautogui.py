@@ -43,7 +43,7 @@ password = pyautogui.password('Enter password (text will be hidden)')
 im1 = pyautogui.screenshot() # Screenshot of the whole screen
 im2 = pyautogui.screenshot(region=(0, 0, 300, 400))
 # Region(Left(X), Top(y), Height, Width)
-pyautogui.screenshot(r'/Users/KailashT/Desktop/test1.png') # Wherever you want to save the image
+pyautogui.screenshot(r'/Users/KailashT/Desktop/test.png') # Wherever you want to save the image
 
 pyautogui.locateOnScreen(im1)
 # Returns a 'Box' (x,y,height,width)
