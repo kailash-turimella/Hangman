@@ -39,37 +39,54 @@ while sum % d != 0:
     
 y = d*((((c+1)/2)*c)*4)
 i=int((sum-y)/d)
-count = 1
 
-while count <= d**2:
-    if ms [r][c] != 'u':
+# Filling the magic square
+for count in range(0, d**2):
+    
+    # Checking if space is already filled
+    if ms[r][c] != 'u':
+        
+        # moving two rows forward
         if r == d-2:
             r = 0
         elif r == d-1:
             r = 1
         else:
             r += 2
+            
+        # moving to the previous column
         if c == 0:
             c = d-1
         else:
             c -= 1
+    
+    # Filling the space
     ms [r][c] = i
+
+    # moving to the previous row
     if r == 0:
         r = d-1
     else:
          r -= 1
+    # moving the to next column
     c += 1
     if c == d:
         c = 0
     i=i+1
-    count += 1
+
 print("\n\n")
+i -= 1
+
+dashes = d+1   # Lines
+dashes += d*2  # Blank spaces
+dashes += d    # Digits
+
 for x in ms:
-    print("-"*13)
+    print("-"*dashes)
     for y in x:
         print("|", y,end=" ")
     print("| ")
-print("-"*13)
+print("-"*dashes)
 print("\n\n")
 print("All the numbers are consecutive.")
 print("None of the numbers are repeated.")
