@@ -1,21 +1,42 @@
-print("Enter the dimensions")
-d = int(input())
+while True:
+    try:
+        d = int(input("Enter the dimensions : "))
+        break
+    except:
+        print("Invalid input")
+
 while d%2 == 0:
-    print("Enter an odd number.")
-    d = int(input())
-u = 'u'
+    try:
+        d = int(input("Enter an odd number : "))
+    except:
+        print("Invalid input")
+        
+print()
 r = 1
+
+# Creating the square
 ms = [d*['u']]
 while r != d:
     ms.append (d*['u'])
     r += 1
 r = 0
 c = d//2
-print("Enter the sum.")
-sum = int(input())
+
+
+while True:
+    try:
+        sum = int(input("Enter the sum : "))
+        break
+    except:
+        print("Invalid input")
+        
+        
 while sum % d != 0:
-    print("The sum needs to be a multiple of the dimensions you entered.")
-    sum = int(input())
+    try:
+        sum = int(input("The sum needs to be a multiple of the dimensions you entered : "))
+    except:
+        print("Invalid input")
+    
 y = d*((((c+1)/2)*c)*4)
 i=int((sum-y)/d)
 count = 1
@@ -44,11 +65,11 @@ while count <= d**2:
     count += 1
 print("\n\n")
 for x in ms:
-    print("-------------")
+    print("-"*13)
     for y in x:
-        print("|", y,end = " ")
+        print("|", y,end=" ")
     print("| ")
-print("-------------")
+print("-"*13)
 print("\n\n")
 print("All the numbers are consecutive.")
 print("None of the numbers are repeated.")
