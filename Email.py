@@ -1,6 +1,6 @@
 import smtplib
 
-email = input('which email do you have?\n').lower()
+email = input('which email do you have??\n').lower()
 while(email != 'gmail' and email != 'outlook' and email != 'yahoo'):
     email = input('Enter one of the following:\n1.Gmail\n2.Outlook\n3.Yahoo\n\n').lower()
 if(email == 'gmail'):
@@ -21,7 +21,7 @@ conn.starttls()  # Encrypting the connection
 
 emailid = input('Enter Email address'+'('+domain+')'+'...\n')
 emailid+=domain
-password = input('Enter your password...\n')
+password = input('Enter your password...\n')   #  zdkdiumfxtwbzice
 while(True):
     try:
         conn.login(emailid,password)
@@ -36,9 +36,11 @@ while(True):
     password = input('Enter password\n')
 
 to=input('Who do you want to send the email to?\n')
-
-subject=input('Subject : ')
-text=input('Enter the message\n')
+if(to=='me' or to=='myself'):
+    to=emailid
+    print(to)
+subject=input('Subject:\n')
+text=input('Enter the body of the email...\n')
 
 message = 'Subject: '+subject+'\n\n'+text
 
@@ -50,4 +52,5 @@ if send=='yes':
 else:
     print('ok')
     
-#conn.sendmail('FROM','TO','Subject: SUBJECT\n\nMESSAGE')
+#conn.sendmail('takkturim@gmail.com','takkturim@gmail.com','Subject: hi\n\nhow are you\n\n-Kailash')
+               #from                  #to                  #message
