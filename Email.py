@@ -21,7 +21,7 @@ conn.starttls()  # Encrypting the connection
 
 emailid = input('Enter Email address'+'('+domain+')'+'...\n')
 emailid+=domain
-password = input('Enter your password...\n')   #  zdkdiumfxtwbzice
+password = input('Enter your password...\n')
 while(True):
     try:
         conn.login(emailid,password)
@@ -36,10 +36,8 @@ while(True):
     password = input('Enter password\n')
 
 to=input('Who do you want to send the email to?\n')
-if(to=='me' or to=='myself'):
-    to=emailid
-    print(to)
-subject=input('Subject:\n')
+
+subject=input('Subject : ')
 text=input('Enter the body of the email...\n')
 
 message = 'Subject: '+subject+'\n\n'+text
@@ -52,5 +50,4 @@ if send=='yes':
 else:
     print('ok')
     
-#conn.sendmail('takkturim@gmail.com','takkturim@gmail.com','Subject: hi\n\nhow are you\n\n-Kailash')
-               #from                  #to                  #message
+#conn.sendmail(from, to, message)
