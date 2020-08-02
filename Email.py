@@ -1,8 +1,10 @@
 import smtplib
 
 email = input('which email do you have??\n').lower()
+
 while(email != 'gmail' and email != 'outlook' and email != 'yahoo'):
     email = input('Enter one of the following:\n1.Gmail\n2.Outlook\n3.Yahoo\n\n').lower()
+    
 if(email == 'gmail'):
     email = 'smtp.gmail.com'
     domain = '@gmail.com'
