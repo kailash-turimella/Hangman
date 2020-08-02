@@ -84,7 +84,6 @@ def fillSudoku(row, col):
         return False;
     else:
         return True;
-
     
 if (fillSudoku(0, 0)) : 
     print ("\n\nSolution is \n")
