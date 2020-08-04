@@ -18,6 +18,7 @@ elif(email == 'yahoo'):
 conn = smtplib.SMTP(email, 587)            # smtp.gmail.com
                                            # smtp-mail.outlook.com
                                            # smtp.mail.yahoo.com
+        
 conn.ehlo()      # Starting the connection
 conn.starttls()  # Encrypting the connection
 
