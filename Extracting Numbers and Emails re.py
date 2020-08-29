@@ -24,15 +24,7 @@ emailRegex = re.compile(r'''
 ''', re.VERBOSE)
 
  
-text = '''
-800-420-7240
-415-863-9900
-415-863-9950 ext 12345
-info@nostarch.com
-media@nostarch.com
-academic@nostarch.com
-info@nostarch.com
-'''
+text = pyperclip.paste()
 
 extractedPhoneNumbers = phoneNumberRegex.findall(text)
 extractedEmail = emailRegex.findall(text)
