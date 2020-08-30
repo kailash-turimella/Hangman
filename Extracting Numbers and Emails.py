@@ -17,7 +17,6 @@ phoneNumberRegex = re.compile(r'''
 )
 ''', re.VERBOSE) 
 
-
 emailRegex = re.compile(r'''
 [a-zA-Z0-9_.+]+             # name
 @                           # @
