@@ -3,7 +3,6 @@ import pyautogui
 """
 FAIL-SAFE : Move your mouse to any corner of your screen to stop pyautogui from controlling your mouse or keyboard
 
-
 (0,0) is the top-left of your screen
 
 X increases as you move the mouse to the right
