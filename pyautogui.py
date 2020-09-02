@@ -8,7 +8,6 @@ FAIL-SAFE : Move your mouse to any corner of your screen to stop pyautogui from 
 X increases as you move the mouse to the right
 Y increases as you move the mouse lower
 """
-
 width, height = pyautogui.size() # Size of your computer screen
 
 print(pyautogui.position()) # Current position of your mouse on your screen
