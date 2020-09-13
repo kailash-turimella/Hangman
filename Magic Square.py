@@ -10,7 +10,7 @@ while d%2 == 0:
         d = int(input("Enter an odd number : "))
     except:
         print("Invalid input")
-        
+      
 print()
 r = 1
 
