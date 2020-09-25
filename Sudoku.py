@@ -33,7 +33,6 @@ while row != -1:
     sudoku[row][col] = val
     
 printSudoku()
-
 def isAvailable(row, col, num):
     
     rowStart = int(int(row/3) * 3);
